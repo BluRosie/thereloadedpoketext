@@ -2,3 +2,5 @@
 *.pyc
 *.nds
 tmp_*/*
+build/*
+dist/*
