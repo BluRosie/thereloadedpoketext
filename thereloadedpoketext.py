@@ -95,7 +95,7 @@ def Rewrite(xmlname):
 			if replace < len(binary.strlist):
 				binary.strlist[replace]= xmlr.filelist[fileid][replace]
 			else:
-				print "testing"
+				print "adding new string, index " + str(replace)
 				binary.strlist.append(xmlr.filelist[fileid][replace])
         # texttopoke module
         p=texttopoke.Makefile(binary.strlist)
