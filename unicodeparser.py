@@ -1,7 +1,7 @@
-import codecs
+import codecs, sys
 tb = {}
 d = {}
-f = codecs.open("Table.tbl",encoding="utf-16")
+f = codecs.open(sys._MEIPASS + "/Table.tbl",encoding="utf-16")
 l = f.readlines()
 for q in l:
     r=q.split("=", 1)
