@@ -4,6 +4,7 @@ import poketext
 import pokexml
 import texttopoke
 import cProfile
+import shutil
 
 
 
@@ -146,6 +147,7 @@ while True:
     elif s[0]=="mkrom":
         rom.create(s[1])
     elif s[0]=="q":
+        shutil.rmtree(rom.getFolder())
         break
     else:
         print """commands:

@@ -20,7 +20,7 @@ class NDSFILES:
                                self.f+"/overlay","-t", self.f+"/banner.bin","-h", self.f+"/header.bin" ])
             self.readmode = 1
         if self.readmode==0 and os.name == 'posix':
-            os.system("wine ndstool.exe "+"-x "+self.r+ " -9 "+self.f+"/arm9.bin "+"-7 "+self.f+"/arm7.bin "+"-y9 "+self.f+"/overarm9.bin "+"-y7 "+ self.f+"/overarm7.bin "+"-d "+self.f+"/root "+"-y "+self.f+"/overlay "+"-t "+self.f+"/banner.bin "+"-h "+ self.f+"/header.bin")
+            os.system("./ndstool.exe "+"-x "+self.r+ " -9 "+self.f+"/arm9.bin "+"-7 "+self.f+"/arm7.bin "+"-y9 "+self.f+"/overarm9.bin "+"-y7 "+ self.f+"/overarm7.bin "+"-d "+self.f+"/root "+"-y "+self.f+"/overlay "+"-t "+self.f+"/banner.bin "+"-h "+ self.f+"/header.bin")
             
     def create(self, name):
         if self.readmode!=0 and os.name == 'nt':
@@ -28,7 +28,7 @@ class NDSFILES:
                                self.f+"/overarm9.bin","-y7", self.f+"/overarm7.bin","-d", self.f+"/root","-y",
                                self.f+"/overlay","-t", self.f+"/banner.bin","-h", self.f+"/header.bin"])
         else:#if (self.readmode!=0) and (os.name == "posix"):
-            os.system("wine ndstool.exe "+"-c "+name+ " -9 "+self.f+"/arm9.bin "+"-7 "+self.f+"/arm7.bin "+"-y9 "+self.f+"/overarm9.bin "+"-y7 "+ self.f+"/overarm7.bin "+"-d "+self.f+"/root "+"-y "+self.f+"/overlay "+"-t "+self.f+"/banner.bin "+"-h "+ self.f+"/header.bin")
+            os.system("./ndstool.exe "+"-c "+name+ " -9 "+self.f+"/arm9.bin "+"-7 "+self.f+"/arm7.bin "+"-y9 "+self.f+"/overarm9.bin "+"-y7 "+ self.f+"/overarm7.bin "+"-d "+self.f+"/root "+"-y "+self.f+"/overlay "+"-t "+self.f+"/banner.bin "+"-h "+ self.f+"/header.bin")
     def getFolder(self):
         return self.f
     def cleanup(self):
