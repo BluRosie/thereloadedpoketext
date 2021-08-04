@@ -118,8 +118,9 @@ def Rewrite(xmlname):
 
 
 #rom and narc code
-print "the NEW Poketext"
-print "(C) 2008/2009 loadingNOW"
+print "the Reloaded Poketext"
+print """(C) 2008/2009 loadingNOW (thenewpoketext)
+    reloaded by BluRose"""
 romname = raw_input("Romname:") 
 rom = execute.NDSFILES(romname)
 rom.dump()
