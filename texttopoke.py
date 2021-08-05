@@ -51,16 +51,16 @@ def ToCode(text,sErrors=False,compressed=False):
                 data.append(0x25BD)                 
                 text = text[2:len(text)]
             else:
-                if errorReport:
-                    romerror.unknownEscape(text[1:2])
+                #if errorReport:
+                #    romerror.unknownEscape(text[1:2])
                 print "unknown escape: %s" % text[1:2]
                 text = text[2:len(text)]
         else:
             while not(unicodeparser.d.has_key(text[0:6-i]) | (i==6)):
                 i=i+1
             if i==6:
-                if errorReport:
-                    romerror.charNotFound(text[0:1])
+                #if errorReport:
+                #    romerror.charNotFound(text[0:1])
                 print "Char not found %s(%i)" % (text[0:1],ord(text[0:1]))
                 text = text[6-i+1:len(text)]
             else:
